@@ -1,0 +1,11 @@
+[user]
+	name = incomingstick
+	email = incomingstick@gmail.com
+[color "status"]
+    added = green
+    changed = blue
+    untracked = magenta
+    deleted = red
+
+[core]
+	editor = emacs
