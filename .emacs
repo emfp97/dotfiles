@@ -52,9 +52,6 @@
 ; enable system copy paste
 (setq x-select-enable-clipboard t)
 
-
-; Stuff copied from Casey Muratori's .emacs file
-
 ; Navigation
 (defun previous-blank-line ()
   "Moves to the previous line containing nothing but whitespace."
@@ -132,8 +129,10 @@
 (global-set-key (read-kbd-macro "\M-b")  'ido-switch-buffer)
 (global-set-key (read-kbd-macro "\M-B")  'ido-switch-buffer-other-window)
 
-; Turn off the toolbar
-(tool-bar-mode -1)
+; Turn off the toolbar, scroll bar, and menu bar
+(if window-system (tool-bar-mode -1))
+(if window-system (scroll-bar-mode -1))
+(menu-bar-mode -1)
 
 (load-library "view")
 (require 'cc-mode)
@@ -142,7 +141,6 @@
 (ido-mode t)
 
 (setq compilation-directory-locked nil)
-(scroll-bar-mode -1)
 (setq shift-select-mode nil)
 (setq enable-local-variables nil)
 
@@ -167,5 +165,3 @@
     "Never, ever split a window.  Why would anyone EVER want you to do that??"
   nil)
 (setq split-window-preferred-function 'casey-never-split-a-window)
-
-(add-hook 'window-setup-hook 'post-load-stuff t)
