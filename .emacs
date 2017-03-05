@@ -32,13 +32,20 @@
  '(tab-width 4))
 
 ; Determine the underlying operating system
+(setq win32 (or (eq system-type 'ms-dos)
+                (eq system-type 'windows-nt)))
 (setq aquamacs (featurep 'aquamacs))
-(setq linux (featurep 'x))
-(setq win32 (not (or aquamacs linux)))
+(setq linux (or (eq system-type 'gnu)
+                (eq system-type 'gnu/linux)
+                (eq system-type 'gnu/kfreebsd)
+                (eq system-type 'cygwin)))
 
 (when linux
   (setq makescript "./build.sh")
   (display-battery-mode 1))
+
+(when win32
+  (setq makescript "./build.bat"))
 
 (defun find-project-directory-recursive ()
   "Recursively search for a buildfile."
@@ -77,7 +84,7 @@
   (interactive)
   (if (find-project-directory) (compile makescript))
   (other-window 1))
-(global-set-key [f5] 'compile)
+(global-set-key [f5] 'save-all-and-compile)
 (setq-default truncate-lines 1)
 
 (define-key global-map [f9] 'first-error)
@@ -209,7 +216,7 @@
 (setq truncate-partial-width-windows nil)
 (split-window-horizontally)
 
-(defun casey-never-split-a-window
+(defun never-split-a-window
     "Never, ever split a window.  Why would anyone EVER want you to do that??"
   nil)
-(setq split-window-preferred-function 'casey-never-split-a-window)
+(setq split-window-preferred-function 'never-split-a-window)
