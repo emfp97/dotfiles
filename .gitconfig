@@ -8,4 +8,4 @@
     deleted = red
 
 [core]
-	editor = emacs
+	editor = emacs -nw
