@@ -48,6 +48,6 @@ alias ssh-server1="ssh administrator@server1"
 alias ssh-frontpi="ssh pi@frontpi"
 alias ssh-middlepi="ssh pi@middlepi"
 alias ssh-backpi="ssh pi@backpi"
-alias ssh-muiscpi="ssh pi@musicpi"
+alias ssh-musicpi="ssh pi@musicpi"
 
 export LFS=/mnt/lfs
