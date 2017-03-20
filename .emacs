@@ -1,3 +1,5 @@
+
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -31,10 +33,14 @@
  '(tab-always-indent t)
  '(tab-width 4))
 
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+
 ; Determine the underlying operating system
 (setq win32 (or (eq system-type 'ms-dos)
                 (eq system-type 'windows-nt)))
-(setq aquamacs (featurep 'aquamacs))
+(setq macos (featurep 'aquamacs))
 (setq linux (or (eq system-type 'gnu)
                 (eq system-type 'gnu/linux)
                 (eq system-type 'gnu/kfreebsd)
@@ -134,6 +140,7 @@
   (copy-region-as-kill (mark) (point))
 )
 
+; formatting key bindings
 (define-key global-map "\M- "      'set-mark-command)
 (define-key global-map "\M-q"      'append-as-kill)
 (define-key global-map "\C-v"      'yank)
@@ -147,6 +154,8 @@
 (define-key global-map "\M-:" 'View-back-to-mark)
 (define-key global-map "\M-;" 'exchange-point-and-mark)
 
+; magit and git keybindings
+(global-set-key (kbd "C-x g") 'magit-status)
 
 ; Compile program using <F5>
 ; save all unsaved files here, then compile
@@ -200,6 +209,8 @@
 (require 'ido)
 (require 'compile)
 (ido-mode t)
+
+(require 'magit)
 
 (setq compilation-directory-locked nil)
 (setq shift-select-mode nil)
