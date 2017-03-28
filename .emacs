@@ -353,10 +353,16 @@
     (pop-mark)
     (insert "_H")
     (insert "\n\n")
-    (insert "#endif"))  
-
+    (insert "#endif /* ")
+    (push-mark)
+    (insert BaseFileName)
+    (upcase-region (mark) (point))
+    (pop-mark)
+    (insert "_H */\n")) 
+    
   (cond ((file-exists-p buffer-file-name) t)
-        ((string-match "[.]h" buffer-file-name)   (header-format)))
+        ((string-match "[.]h" buffer-file-name)
+         (header-format)))
         
 
   (defun casey-find-corresponding-file ()
