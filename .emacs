@@ -1,5 +1,3 @@
-
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -166,7 +164,6 @@
   (if (find-project-directory) (compile makescript))
   (other-window 1))
 (global-set-key [f5] 'save-all-and-compile)
-(setq-default truncate-lines 1)
 
 (defun replace-string (FromString ToString)
   "Replace a string without moving point."
@@ -192,12 +189,17 @@
 (define-key global-map "\C-s" 'save-buffer)
 (define-key global-map "\M-w" 'other-window)
 
-; Setup my find-files
+2; Setup my find-files
 (define-key global-map "\M-f" 'find-file)
 (define-key global-map "\M-F" 'find-file-other-window)
 
+; searches
+(define-key global-map "\C-f" 'search-forward)
+
 (global-set-key (read-kbd-macro "\M-b")  'ido-switch-buffer)
 (global-set-key (read-kbd-macro "\M-B")  'ido-switch-buffer-other-window)
+
+(global-set-key "\S-r" 'self-insert-command)
 
 ; Turn off the toolbar, scroll bar, and menu bar
 (if window-system (tool-bar-mode -1))
@@ -283,7 +285,7 @@
                                     (brace-list-entry)
                                     (block-open)
                                     (block-close)
-                                    (substatement-open)
+                                    (substatement-open . (after))
                                     (statement-case-open)
                                     (class-open)))
     (c-hanging-colons-alist      . ((inher-intro)
@@ -296,32 +298,34 @@
                                     list-close-comma
                                     defun-close-semi))
     (c-offsets-alist             . ((arglist-close         .  c-lineup-arglist)
+                                    (topmost-intro         .  0)
                                     (label                 . -4)
                                     (access-label          . -4)
                                     (substatement-open     .  0)
                                     (statement-case-intro  .  4)
-                                    (statement-block-intro .  c-lineup-for)
+                                    (statement-block-intro .  1)
                                     (case-label            .  4)
                                     (block-open            .  0)
                                     (inline-open           .  0)
                                     (topmost-intro-cont    .  0)
                                     (knr-argdecl-intro     . -4)
-                                    (brace-list-open       .  0)
+                                    (brace-list-open       .  4)
                                     (brace-list-intro      .  4)))
-    (c-echo-syntactic-information-p . t))
+    (c-echo-syntactic-information-p . t)F)
      "Emacs Fancy C++ Style")
 
 ; C/C++ mode handling
 (defun fancy-c-hook ()
   ; Set my style for the current buffer
-  (c-add-style "Custom C++" emacs-fancy-c-style t)
+  ;(c-add-style "Custom C++" emacs-fancy-c-style t)
 
-  ; 4-space tabs
+                                        ; 4-space tabs
+  (setq c-basic-offset 4)
   (setq tab-width 4
         indent-tabs-mode nil)
 
   ; Additional style stuff
-  (c-set-offset 'member-init-intro '++)
+  (c-set-offset 'member-init-intro '++++)
 
   ; No hungry backspace
   (c-toggle-auto-hungry-state -1)
@@ -335,6 +339,10 @@
   (setq dabbrev-case-fold-search t)
   (setq dabbrev-upcase-means-case-search t)
 
+
+  ; line wrap off when in c++ mode
+  (setq-default truncate-lines 1)
+  
   ;; Abbrevation expansion
   (abbrev-mode 1)
 
@@ -360,8 +368,7 @@
   (cond ((file-exists-p buffer-file-name) t)
         ((string-match "[.]h" buffer-file-name)   (header-format)))
         
-
-  (defun casey-find-corresponding-file ()
+  (defun find-corresponding-file ()
     "Find the file that corresponds to this one."
     (interactive)
     (setq CorrespondingFileName nil)
@@ -379,17 +386,17 @@
         (setq CorrespondingFileName (concat BaseFileName ".h")))
     (if CorrespondingFileName (find-file CorrespondingFileName)
       (error "Unable to find a corresponding file")))
-  (defun casey-find-corresponding-file-other-window ()
+  (defun find-corresponding-file-other-window ()
     "Find the file that corresponds to this one."
     (interactive)
     (find-file-other-window buffer-file-name)
-    (casey-find-corresponding-file)
+    (find-corresponding-file)
     (other-window -1))
-  (define-key c++-mode-map "\M-h" 'casey-find-corresponding-file-other-window)
+  (define-key c++-mode-map "\M-h" 'find-corresponding-file-other-window)
 
-  (define-key c++-mode-map "\t" 'dabbrev-expand)
-  (define-key c++-mode-map [S-tab] 'indent-for-tab-command)
-  (define-key c++-mode-map "\C-y" 'indent-for-tab-command)
+  ;(define-key c++-mode-map "\t" 'dabbrev-expand)
+  (define-key c++-mode-map "\t" 'indent-for-tab-command)
+  ;(define-key c++-mode-map "\C-y" 'indent-for-tab-command)
   (define-key c++-mode-map [C-tab] 'indent-region)
   (define-key c++-mode-map "" 'indent-region)
 
@@ -403,6 +410,7 @@
   (define-key c++-mode-map "\M-q" 'append-as-kill)
   (define-key c++-mode-map "\M-a" 'yank)
   (define-key c++-mode-map "\M-z" 'kill-region)
+  (define-key c++-mode-map "\C-c" 'kill-ring-save)
   
   ; Turn on line numbers
   ;(linum-mode)
