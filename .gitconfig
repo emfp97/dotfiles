@@ -1,7 +1,6 @@
 [user]
 	name = incomingstick
 	email = incomingstick@gmail.com
-	signingkey = 12B210CA1C7F4A15
 [color "status"]
     added = green
     changed = blue
