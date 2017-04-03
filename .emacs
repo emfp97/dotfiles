@@ -199,7 +199,7 @@
 (global-set-key (read-kbd-macro "\M-b")  'ido-switch-buffer)
 (global-set-key (read-kbd-macro "\M-B")  'ido-switch-buffer-other-window)
 
-(global-set-key "\S-r" 'self-insert-command)
+(global-set-key "R" 'self-insert-command)
 
 ; Turn off the toolbar, scroll bar, and menu bar
 (if window-system (tool-bar-mode -1))
@@ -414,6 +414,8 @@
   (define-key c++-mode-map "\M-a" 'yank)
   (define-key c++-mode-map "\M-z" 'kill-region)
   (define-key c++-mode-map "\C-c" 'kill-ring-save)
+
+  (define-key c++-mode-map "R" 'self-insert-command)
   
   ; Turn on line numbers
   ;(linum-mode)
