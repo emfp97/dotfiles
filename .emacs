@@ -319,13 +319,10 @@
   ; Set my style for the current buffer
   ;(c-add-style "Custom C++" emacs-fancy-c-style t)
 
-                                        ; 4-space tabs
+  ; 4-space tabs
   (setq c-basic-offset 4)
   (setq tab-width 4
         indent-tabs-mode nil)
-
-  ; Additional style stuff
-  (c-set-offset 'member-init-intro '++++)
 
   ; No hungry backspace
   (c-toggle-auto-hungry-state -1)

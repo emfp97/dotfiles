@@ -12,19 +12,23 @@
 
 set $mod Mod4
 
-# Audio test
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5%     # increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%     # decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle              # mute sound
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20       # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20     # decrease screen brightness
 
 # Proper hidpi  settings
-exec xrandr --dpi 220
+exec --no-startup-id xrandr --dpi 220
 
 # Wallpaper
 exec --no-startup-id feh --bg-center ~/Pictures/wallpaper.jpg
 
 # Start Network Manager applet
-exec nm-applet
+exec --no-startup-id nm-applet
 
 # No Borders
 new_window pixel 1
@@ -154,6 +158,9 @@ bindsym $mod+Ctrl+l exec i3lock
 # Screenshot
 bindsym $mod+p exec maim ~/Pictures/screenshots/$(date +%F-%T).png
 
+# custom keybindings
+bindsym $mod+i exec chromium %U
+
 # Window gaps
 smart_gaps on
 gaps inner 20
@@ -193,6 +200,3 @@ bar {
         status_command i3status
         height 25
 }
-
-# custom keybindings
-bindsym $mod+i exec chromium %U

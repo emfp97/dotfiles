@@ -130,6 +130,6 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # startx when in Arch system
-if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+if [[ -z "$DISPLAY" ]]; then
   exec startx
 fi
