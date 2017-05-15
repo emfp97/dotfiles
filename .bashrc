@@ -148,6 +148,6 @@ if [ -d "$HOME/.cargo" ] ; then
 fi
 
 # startx when in Arch system
-if [[ -z "$DISPLAY" ]]; then
+if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
   exec startx
 fi
