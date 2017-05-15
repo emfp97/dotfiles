@@ -1,7 +1,7 @@
 
 # Brass Bell rdesktop commands
 alias helm="rdesktop -g 2880x1680 192.168.16.36"
-alias port="rdesktop -g 2880x1680 192.168.16.37"
+alias port="rdesktop -g 2880x1680 192.168.16.43"
 alias drawer4="rdesktop -g 2880x1680 192.168.16.38"
 alias starboard="rdesktop -g 2880x1680 192.168.16.35"
 alias lessonsdell="rdesktop -g 2880x1680 192.168.16.29"
@@ -48,9 +48,9 @@ alias ln="ln -v"
 alias ssh-server="ssh administrator@dogesec.us"
 alias ssh-server0="ssh administrator@server0"
 alias ssh-server1="ssh administrator@server1"
-alias ssh-frontpi="ssh pi@frontpi"
-alias ssh-middlepi="ssh pi@middlepi"
-alias ssh-backpi="ssh pi@backpi"
-alias ssh-musicpi="ssh pi@musicpi"
+alias ssh-frontpi="ssh pi@192.168.16.47"
+alias ssh-middlepi="ssh pi@192.168.16.42"
+alias ssh-backpi="ssh pi@192.168.16.44"
+alias ssh-musicpi="ssh pi@192.168.16.48"
 alias ssh-ccconrad="ssh ccconrad@37.60.247.78 -p 18765"
 export LFS=/mnt/lfs
