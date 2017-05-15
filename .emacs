@@ -374,6 +374,10 @@
   (defun find-corresponding-file ()
     "Find the file that corresponds to this one."
     (interactive)
+    (find-project-directory-recursive)
+    (if (file-exists-p "includes") t
+        (cd "../")
+        (find-project-directory-recursive))
     (setq CorrespondingFileName nil)
     (setq BaseFileName (file-name-sans-extension buffer-file-name))
     (if (string-match "\\.c" buffer-file-name)
@@ -425,7 +429,7 @@
 
 ; Startup windowing
 (setq next-line-add-newlines nil)
-(setq-default truncate-lines t)
+(setq-default truncate-lines nil)
 (setq truncate-partial-width-windows nil)
 (split-window-horizontally)
 

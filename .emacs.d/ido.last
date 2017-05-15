@@ -1,0 +1,138 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/includes/Core/" . "Systems/")
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/core/" . "Systems/")
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/includes/" . "core/")
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/app/src/include/" . "Systems/")
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/app/src/" . "include/")
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/" . "core/")
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/app/" . "src/")
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/" . "includes/")
+ ("/cygdrive/g/IT/home/admin/workspace/HackerRankChallenges/C++/Strings/" . "Attribute Parser/")
+ ("/cygdrive/g/IT/home/admin/workspace/HackerRankChallenges/C++/" . "Strings/")
+ ("/cygdrive/g/IT/home/admin/" . "dotfiles/")
+ ("/cygdrive/g/IT/home/admin/workspace/OpenRPG/src/" . "character/")
+ ("/cygdrive/g/IT/home/admin/workspace/OpenRPG/" . "include/")
+ ("/cygdrive/g/IT/home/admin/workspace/" . "discord-mud/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/cygdrive/g/IT/home/admin/workspace/OpenRPG/include/"
+ "/cygdrive/g/IT/home/admin/workspace/OpenRPG/src/character/"
+ "/cygdrive/g/IT/home/admin/workspace/canvas/"
+ "/cygdrive/g/IT/home/admin/workspace/OpenRPG/src/"
+ "/cygdrive/g/IT/home/admin/workspace/discord-mud/"
+ "/cygdrive/g/IT/home/admin/workspace/OpenRPG/"
+ "/cygdrive/g/IT/home/admin/workspace/OpenRPG/_includes/"
+ "/cygdrive/g/IT/home/admin/workspace/OpenRPG/css/"
+ "/cygdrive/g/IT/home/admin/workspace/discord-mud/includes/core/"
+ "/cygdrive/g/IT/home/admin/workspace/discord-mud/includes/"
+ "/cygdrive/g/IT/home/admin/workspace/discord-mud/src/core/"
+ "/cygdrive/g/IT/home/admin/workspace/discord-mud/includes/Core/Systems/"
+ "/cygdrive/g/IT/home/admin/workspace/discord-mud/src/core/Systems/"
+ "/cygdrive/g/IT/home/admin/workspace/discord-mud/includes/Core/"
+ "/cygdrive/g/IT/home/admin/workspace/discord-mud/src/app/"
+ "/cygdrive/g/IT/home/admin/workspace/discord-mud/src/app/src/Systems/"
+ "/cygdrive/g/IT/home/admin/workspace/discord-mud/src/app/src/"
+ "/cygdrive/g/IT/home/admin/workspace/discord-mud/src/includes/"
+ "/cygdrive/g/IT/home/admin/workspace/HackerRankChallenges/C++/Strings/Attribute Parser/"
+ "/cygdrive/g/IT/home/admin/workspace/HackerRankChallenges/C++/Strings/StringStream/"
+ "/cygdrive/g/IT/home/admin/dotfiles/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "races.h"
+ "races.cpp"
+ "main.cxx"
+ "canvas.cxx"
+ "character-generator.cpp"
+ "character.cpp"
+ "character.h"
+ "CMakeLists.txt"
+ "openrpg.cpp"
+ "build.sh"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/cygdrive/g/IT/home/admin/workspace/OpenRPG/src/character/" (22796 60989 442640 800000) "races.cpp" "CMakeLists.txt" "character.cpp" "character-generator.cpp" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/OpenRPG/include/" (22796 59339 199091 100000) "utils.h" "roll-parser.h" "races.h" "opt-parser.h" "names.h" "die.h" "config.h" "character.h" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/canvas/" (22799 21602 524459 100000) "main.cxx" "canvas.hxx" "canvas.cxx" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/OpenRPG/src/" (22796 52380 527124 600000) "utils.cpp" "tests/" "roll/" "openrpg.cpp" "names/" "CMakeLists.txt" "character/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/OpenRPG/" (22796 52380 574011 600000) "test/" "src/" "README.md" "LICENSE" "include/" "data/" "config.h.in" "CMakeLists.txt" "build.sh" "build/" ".travis.yml" ".gitignore" ".github/" ".git/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/" (22792 62979 636106 600000) "src/" "README.md" "Makefile" "LICENSE" "includes/" "discord-mud.pro" "data/" "build.sh" "build/" ".qmake.conf" ".gitignore" ".git/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/OpenRPG/build/src/" (22795 49700 45511 800000) "roll/" "names/" "Makefile" "libutils.a" "cmake_install.cmake" "CMakeFiles/" "character/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/OpenRPG/build/" (22795 49712 121933 800000) "Thumbs.db" "test/" "src/" "sitemap.xml" "search.json" "roll.exe" "robots.txt" "openrpg.exe" "name-generator.exe" "Makefile" "logo.jpg" "LICENSE" "js/" "index.html" "index.htm" "include/" "favicon.ico.bak" "favicon.ico" "faq/" "examples/" "download/" "documentation/" "d20_blue.jpg" "CTestTestfile.cmake" "css/" "contributing/" "CNAME" "cmake_install.cmake" "CMakeFiles/" "CMakeCache.txt" "character-generator.exe" "build/" "blog/" "about/" "../" "./")
+
+ ("/cygdrive/" (22792 59657 0 0) "../" "./" "s/" "g/" "c/")
+
+ ("/cygdrive/g/" (22792 50835 981593 500000) "Thumbs.db" "School Services/" "Scans/" "Repairs/" "Purchasing/" "Program the Optimus 5500 for AIMsi/" "Print Department/" "Marketing/" "IT/" "Human Resources/" "Employee Folders/" "Education Department/" "Combo/" "Band and Orchestra/" "AIMsi Exports/" "../" "./")
+
+ ("/cygdrive/g/IT/" (22777 19706 364923 100000) "Website/" "wallpapers/" "VMS Pro (Sec. Cameras)/" "TriTech/" "QB2017Installer/" "putty.exe" "Printers/" "MBM/" "home/" "fwdscreensavers.zip" "Desco/" "commands for depreciation.txt" "ComboCalculator-master.zip" "ComboCalculator/" "Brass Bell Hold Music 20070710.mp3" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/" (22787 31809 477540 800000) "workspace/" "dotfiles/" "bin/" ".ssh/" ".profile" ".minttyrc" ".irssi/" ".gnupg/" ".gitconfig" ".git-prompt.sh" ".git-completion.bash" ".gem/" ".gdbinit" ".emacs.d/" ".emacs" ".config/" ".bash_history" ".bash_aliases" ".bashrc" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/includes/Core/" (22783 27361 696916 0) "world.h" "user.h" "Systems/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/core/Systems/" (22783 27360 993656 200000) "systems.cpp" "sys.cpp" "nav.cpp" "accts.cpp" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/includes/Core/Systems/" (22783 27360 899906 500000) "systems.h" "sys.h" "nav.h" "accts.h" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/core/" (22783 27361 40666 900000) "world.cpp" "user.cpp" "Systems/" "scratch" "Makefile" "main.cpp" "core.pro" "build/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/includes/" (22783 27293 920322 500000) "qt-globals.h" "discord-mud.h" "core/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/includes/core/" (22783 27361 696916 0) "world.h" "user.h" "Systems/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/OpenRPG/_includes/" (22786 37075 44077 100000) "top-nav.html" "page-headers.html" "nav-docs.html" "header.html" "footer.html" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/OpenRPG/css/" (22786 24383 44175 200000) "yamm.css" "style.css" "blog.css" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/OpenRPG/_layouts/" (22783 45474 19874 400000) "home.html" "docs.html" "default.html" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/" (22780 61073 802144 600000) "test/" "core/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/dotfiles/" (22774 18213 613937 100000) ".Xdefaults" ".nanorc" ".nano/" ".minttyrc" ".irssi/" ".gitconfig" ".git-prompt.sh" ".git-completion.bash" ".git/" ".gdbinit" ".emacs.d/" ".emacs" ".config/" ".bash_aliases" ".bashrc" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/" (22777 17561 133475 0) "OpenRPG/" "HackerRankChallenges/" "discord-mud/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/app/src/include/Systems/" (22778 15697 708683 500000) "systems.h" "sys.h" "nav.h" "accts.h" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/app/src/include/" (22778 15697 724291 800000) "world.h" "user.h" "Systems/" "globals.h" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/app/src/" (22778 15717 120040 200000) "world.cpp" "user.cpp" "Systems/" "scratch" "main.cpp" "include/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/app/" (22778 15697 551180 100000) "src/" "Makefile" "build/" "assets/" "app.pro" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/build/" (22774 13609 470776 0) "discord-mud.exe" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/app/src/Systems/" (22774 14609 287810 600000) "systems.cpp" "sys.cpp" "nav.cpp" "accts.cpp" ".#systems.cpp" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/discord-mud/src/includes/" (22765 5845 323894 100000) "world.h" "user.h" "globals.h" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/HackerRankChallenges/C++/Strings/Attribute Parser/" (22763 64510 316385 600000) "README.md" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/HackerRankChallenges/C++/Strings/" (22763 60175 723659 300000) "StringStream/" "Strings/" "Attribute Parser/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/HackerRankChallenges/C++/Strings/StringStream/" (22763 50047 843151 0) "README.md" "answer.cpp" "a.exe" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/HackerRankChallenges/C++/" (22763 41774 834065 500000) "Strings/" "Introduction/" "../" "./")
+
+ ("/cygdrive/g/IT/home/admin/workspace/HackerRankChallenges/" (22763 41774 963054 900000) "README.md" "Linux Shell/" "C++/" "Algorithms/" ".gitignore" ".git/" "../" "./")
+
+ ("/cygdrive/g/IT/home/" (22749 26842 73839 800000) "admin/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
