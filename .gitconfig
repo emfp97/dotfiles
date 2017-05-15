@@ -9,5 +9,6 @@
 
 [core]
 	editor = emacs -nw
+	autocrlf = input
 [commit]
 	gpgsign = true

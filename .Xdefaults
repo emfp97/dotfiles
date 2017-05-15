@@ -1,5 +1,3 @@
-
-
 ! do not scroll with output
 URxvt*scrollTtyOutput: false
 
